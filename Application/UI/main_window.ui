@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>w_MusicDownload</class>
+ <widget class="QWidget" name="w_MusicDownload">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Youtube Music MP3 Downloader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../icons/icons.qrc">
+    <normaloff>:/main/music_player.png</normaloff>:/main/music_player.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="Chinese" country="China"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="gb_Setup">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>- 界面设置 -</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="lb_Language">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>语言：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rb_CN">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>简体中文</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rb_EN">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>English</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="hspacer_1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cb_theme">
+        <property name="styleSheet">
+         <string notr="true">QCheckBox::indicator {
+width: 40 px;
+height: 40 px;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(:/light_mode/light_mode.png);
+}
+
+QCheckBox::indicator:checked {
+    image:  url(:/dark_mode/dark_mode.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QGroupBox" name="gb_Download">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>20</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="title">
+      <string>- 下载 -</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <layout class="QGridLayout" name="gridLayou">
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lb_DownloadFolder">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>文件夹：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="le_DownloadFolder">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pb_Browse">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>浏览</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QPushButton" name="pb_Download">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>点击下载</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../icons/icons.qrc">
+          <normaloff>:/download/download.png</normaloff>:/download/download.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="lb_Msg">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>10</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QGroupBox" name="gb_Info">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>20</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="title">
+      <string>- 歌曲信息 -</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="labelAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lb_Title">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>歌名：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="le_Title">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lb_Author">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>作者：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="le_Author">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <spacer name="vspacer_1">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>30</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="gb_Src">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>20</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="title">
+      <string>- 输入歌曲YouTube链接 -</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="lb_Url">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>链接：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_Url">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pb_Clear">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>14</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>清空</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>rb_CN</tabstop>
+  <tabstop>rb_EN</tabstop>
+  <tabstop>le_Url</tabstop>
+  <tabstop>pb_Clear</tabstop>
+  <tabstop>le_Title</tabstop>
+  <tabstop>le_Author</tabstop>
+  <tabstop>le_DownloadFolder</tabstop>
+  <tabstop>pb_Browse</tabstop>
+  <tabstop>pb_Download</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../icons/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

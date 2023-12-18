@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="main">
+    <file>music_player.png</file>
+  </qresource>
+  <qresource prefix="dark_mode">
+    <file>dark_mode.png</file>
+  </qresource>
+  <qresource prefix="light_mode">
+    <file>light_mode.png</file>
+  </qresource>
+  <qresource prefix="download">
+    <file>download.png</file>
+  </qresource>
+</RCC>
